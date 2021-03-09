@@ -48,10 +48,12 @@ function game() {
         }
     }
     if (playerScore >= 3) {
-        return `Your score: ${playerScore}/5. Congratulations, you win the game!`;
+        alert(`Your score: ${playerScore}/5. Congratulations, you win the game!`);
+        return;
     }
     else {
-        return `Your score: ${playerScore}/5. Sorry, you lost. Better luck next time!`;
+        alert(`Your score: ${playerScore}/5. Sorry, you lost. Better luck next time!`);
+        return;
     }
 
 }
