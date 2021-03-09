@@ -15,6 +15,28 @@ function playRound(playerSelection,computerSelection) {
     }
 }
 
+function isTie(playerSelection,computerSelection) {
+    
+    return (playerSelection.toUpperCase() === computerSelection);
+}
+
+function invalidInput(playerSelection) {
+    
+    return (playerSelection.toUpperCase() !== "ROCK" && playerSelection.toUpperCase() !== "PAPER" && playerSelection.toUpperCase() !== "SCISSORS");
+}
+
+function whoWins(playerScore) {
+
+    if (playerScore >= 3) {
+        alert(`Your score: ${playerScore}/5. Congratulations, you win the game!`);
+        return;
+    }
+    else {
+        alert(`Your score: ${playerScore}/5. Sorry, you lost. Better luck next time!`);
+        return;
+    }
+}
+
 function game() {
 
     let round = 1;
@@ -28,10 +50,10 @@ function game() {
         let computerSelection = computerPlay();
         let playerSelection = prompt("Please make a selection: rock, paper or scissors?");
 
-        if (playerSelection.toUpperCase() !== "ROCK" && playerSelection.toUpperCase() !== "PAPER" && playerSelection.toUpperCase() !== "SCISSORS") {
+        if (invalidInput(playerSelection)) {
             alert("Sorry, that\'s not a valid selection. Please try again.");
         }
-        else if (playerSelection.toUpperCase() === computerSelection) {
+        else if (isTie(playerSelection,computerSelection)) {
             console.log("It\'s a draw! Try again.");
         }
         else {
@@ -47,13 +69,6 @@ function game() {
             round++;
         }
     }
-    if (playerScore >= 3) {
-        alert(`Your score: ${playerScore}/5. Congratulations, you win the game!`);
-        return;
-    }
-    else {
-        alert(`Your score: ${playerScore}/5. Sorry, you lost. Better luck next time!`);
-        return;
-    }
-
+    whoWins(playerScore);
+    return;
 }
