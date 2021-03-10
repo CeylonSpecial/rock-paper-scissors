@@ -7,12 +7,8 @@ function computerPlay() {
 
 function playRound(playerSelection,computerSelection) {
     
-    if (playerSelection.toUpperCase() === "ROCK" && computerSelection === "SCISSORS" || playerSelection.toUpperCase() === "PAPER" && computerSelection === "ROCK" || playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "PAPER") {
-        return 1;
-    }
-    else {
-        return 0;
-    }
+    return (playerSelection.toUpperCase() === "ROCK" && computerSelection === "SCISSORS" || playerSelection.toUpperCase() === "PAPER" && computerSelection === "ROCK" || playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "PAPER");
+ 
 }
 
 function isTie(playerSelection,computerSelection) {
