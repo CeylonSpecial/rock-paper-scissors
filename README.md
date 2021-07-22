@@ -1,5 +1,9 @@
 About:
-This was my second and fourth project in The Odin Project's coursework. The first project assignment was to create a basic rock paper scissors game to be played in the browser console. I later added a GUI with buttons and text for the next assignment.
+This was my second and fourth project in The Odin Project's coursework.
+
+Assignment:
+1) Create a basic rock paper scissors game to be played in the browser console (2nd project).
+2) Add a GUI with buttons and text (4th project).
 
 Objectives:
 -learn how to structure a JavaScript file and how to include in a page
